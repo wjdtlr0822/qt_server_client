@@ -31,7 +31,7 @@ void ServerMain::on_btStart_clicked()
         ui->Tedit->append("Server Start....");
         bool bServerStart = ServerStart();
 
-        if(!bServerStart)
+        if(bServerStart)
         {
             ui->Tedit->append("Server Start Success");
             ui->btStart->setText("Stop");
@@ -55,5 +55,15 @@ void ServerMain::on_btStart_clicked()
             ui->Tedit->append("Server Stop Fail");
         }
     }
+}
+
+
+void ServerMain::on_btCancel_clicked()
+{
+    if(ui->btStart->text() == "Stop"){
+        on_btStart_clicked();
+    }
+
+    close();
 }
 

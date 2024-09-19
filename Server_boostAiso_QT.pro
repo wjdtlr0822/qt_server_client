@@ -17,8 +17,11 @@ win32: {
 }
 
 macx::{
-    INCLUDEPATH += D:\0.취업준비\c++공부\boost_1_86_0\boost
+    INCLUDEPATH += /Users/kimjeongsik/Downloads/boost_1_86_0
+    LIBS += -L/Users/kimjeongsik/Downloads/boost_1_86_0/stage/lib
+    LIBS += -lboost_thread -lboost_system
 }
+
 
 SOURCES += \
     main.cpp \

@@ -26,6 +26,8 @@ public:
 private slots:
     void on_btStart_clicked();
 
+    void on_btCancel_clicked();
+
 private:
     Ui::ServerMain *ui;
 };
