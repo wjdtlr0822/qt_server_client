@@ -2,6 +2,9 @@
 #define SERVERMAIN_H
 
 #include <QMainWindow>
+#include <boost/asio.hpp>
+
+using boost::asio::ip::tcp;
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,6 +19,12 @@ class ServerMain : public QMainWindow
 public:
     ServerMain(QWidget *parent = nullptr);
     ~ServerMain();
+
+    bool ServerStart();
+    bool ServerStop();
+
+private slots:
+    void on_btStart_clicked();
 
 private:
     Ui::ServerMain *ui;
