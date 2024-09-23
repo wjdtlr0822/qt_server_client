@@ -2,7 +2,7 @@
 #define SERVERMAIN_H
 
 #include <QMainWindow>
-#include <boost/asio.hpp>
+#include <server.h>
 
 using boost::asio::ip::tcp;
 
@@ -25,10 +25,11 @@ public:
 
 private slots:
     void on_btStart_clicked();
-
     void on_btCancel_clicked();
 
 private:
     Ui::ServerMain *ui;
+    boost::asio::io_context io_context_;
+    Server server_;
 };
 #endif // SERVERMAIN_H

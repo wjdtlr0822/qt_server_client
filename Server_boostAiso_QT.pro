@@ -25,9 +25,11 @@ macx::{
 
 SOURCES += \
     main.cpp \
+    server.cpp \
     servermain.cpp
 
 HEADERS += \
+    server.h \
     servermain.h
 
 FORMS += \

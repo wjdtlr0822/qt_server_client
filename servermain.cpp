@@ -4,6 +4,8 @@
 ServerMain::ServerMain(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::ServerMain)
+    , io_context_()
+    , server_(io_context_)
 {
     ui->setupUi(this);
 }
@@ -15,6 +17,7 @@ ServerMain::~ServerMain()
 
 bool ServerMain::ServerStart()
 {
+    server_.start();
     return true;
 }
 
